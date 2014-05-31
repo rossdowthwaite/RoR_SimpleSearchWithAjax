@@ -1,0 +1,14 @@
+<h1>Listing projects</h1>
+
+<%= form_tag projects_path, :method => 'get', :id => 'projects_search' do %>
+  <p>
+    <%= text_field_tag :search %>
+    <%= submit_tag "Search" %>
+  </p>
+
+<div id="projects"><%= render 'projects' %></div>
+
+<% end %>    
+<br>
+
+<%= link_to 'New Project', new_project_path %>
